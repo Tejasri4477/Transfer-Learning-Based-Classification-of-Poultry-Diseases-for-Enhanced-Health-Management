@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poultry Detect - Prediction</title>
+  <style>
+    body { background: black; color: white; text-align: center; font-family: 'Segoe UI'; }
+    nav { display: flex; justify-content: space-between; padding: 20px; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul li a { color: white; text-decoration: none; }
+    .form { margin-top: 50px; }
+    input[type="file"] { padding: 10px; }
+    .btn { margin-top: 20px; padding: 10px 20px; background: green; color: white; border: none; }
+    .result { margin-top: 30px; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>📷 Poultry Detect</div>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="#">PREDICTION_PAGE</a></li>
+    </ul>
+  </nav>
+
+  <h1>Prediction</h1>
+  <p>Image Classification</p>
+
+  <div class="form">
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <label>Upload Your Image: </label><br>
+      <input type="file" name="image" required><br>
+      <button class="btn" type="submit">predict</button>
+    </form>
+  </div>
+
+  {% if prediction %}
+  <div class="result">
+    <p>Hence , The infection type detected as <strong>{{ prediction }}</strong></p>
+  </div>
+  {% endif %}
+</body>
+</html>
