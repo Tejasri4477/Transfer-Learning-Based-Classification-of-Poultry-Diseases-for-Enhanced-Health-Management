@@ -1,0 +1,115 @@
+# 🐔 Poultry Disease Classification using Transfer Learning
+
+This is an internship project that applies **transfer learning** for classifying poultry diseases using image data. The model is integrated with a **Flask web application** that allows users to upload a chicken image and receive an instant disease prediction.
+
+## 🧪 Supported Disease Classes
+
+- Coccidiosis  
+- Salmonella  
+- Newcastle Disease  
+- Healthy
+
+---
+
+## 💡 Features
+
+- Deep learning with MobileNetV2
+- Flask web app interface
+- Upload chicken images for diagnosis
+- Organized project structure with HTML frontend
+- Custom dataset from Kaggle
+
+---
+
+## 📁 Project Structure
+
+```
+poultry_disease_project/
+├── data/                     # Dataset folders (train, val, test)
+├── static/images/           # UI images
+├── templates/               # HTML templates
+├── app.py                   # Flask app
+├── train_model.py           # Model training script
+├── model.h5                 # Saved trained model
+├── best_model.h5            # (Optional) Best-performing model
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
+├── data.csv                 # (Optional) dataset metadata
+├── kaggle.json              # Kaggle API key
+├── archive/                 # (Optional) raw zip data
+├── main.ipynb               # Notebook version of app
+├── pytorch-resnet18.ipynb   # (Optional) PyTorch version
+└── .venv/                   # Virtual environment (optional)
+```
+
+---
+
+## ⚙️ Installation Instructions
+
+### 1. Clone this repository
+```bash
+git clone https://github.com/Gayathritadiparthi/poultry-disease-classification.git
+cd poultry-disease-classification
+```
+
+### 2. (Optional) Create virtual environment
+```bash
+python -m venv .venv
+.venv\Scripts\activate      # On Windows
+```
+
+### 3. Install required packages
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add dataset
+Download the dataset from Kaggle:  
+https://www.kaggle.com/datasets/chandrashekarnatesh/poultry-diseases  
+Place it under the `data/` folder and split into `train/`, `val/`, and `test/`.
+
+### 5. Train the model
+```bash
+python train_model.py
+```
+
+### 6. Run the web app
+```bash
+python app.py
+```
+
+Open in browser: `http://127.0.0.1:5000`
+
+---
+
+## 🖼️ Web Pages
+
+- `index.html` → Upload image and predict
+- `predict.html` → Shows prediction result
+- `about.html` → Optional info page
+- `contact.html` → Optional contact page
+
+---
+
+## 📦 Requirements
+
+Main Python packages (from `requirements.txt`):
+- Flask
+- TensorFlow / Keras
+- scikit-learn
+- Pillow
+- NumPy
+
+---
+
+## 🙋‍♂️ Author Info
+
+- **Project by:** Gayathri 
+- **Internship Project**  
+- **Topic:** Poultry Disease Detection Using AI
+
+---
+
+## 📄 License
+
+This project is for **educational use only**. All dataset rights belong to their original creators.
